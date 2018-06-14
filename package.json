@@ -23,6 +23,6 @@
     "request-promise": "^4.2.2"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   }
 }
