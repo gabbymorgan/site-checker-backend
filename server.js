@@ -6,6 +6,7 @@ const cors = require('cors');
 const puppeteer = require('puppeteer');
 const getCSS = require('get-css');
 const caniuse = require('caniuse-api');
+const PORT = process.env.PORT || 5000;
 
 
 const server = express();
@@ -72,6 +73,6 @@ server.get('/scrape', (req, res) => {
   }
 });
 
-server.listen('8081')
-console.log('Magic happens on port 8081');
+server.listen(PORT)
+console.log(`Magic happens on ${PORT}`);
 exports = module.exports = server;
