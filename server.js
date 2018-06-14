@@ -51,6 +51,7 @@ server.get('/scrape', (req, res) => {
       const compatibilities = checkCSS(await styles);
       const page = await browser.newPage();
       await page.goto(url);
+
       let links = await page.evaluateHandle(() => {
         return Array.from(document.getElementsByTagName('a')).map(a => a.href);
       });
@@ -60,6 +61,7 @@ server.get('/scrape', (req, res) => {
           return !image.naturalHeight;
         }).map(img => img.src);
       });
+      
       links = await links.jsonValue();
       brokenImages = await brokenImages.jsonValue();
       await browser.close();
