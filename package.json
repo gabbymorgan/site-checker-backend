@@ -1,0 +1,28 @@
+{
+  "name": "node-web-scrape",
+  "version": "0.0.1",
+  "description": "Scrape le web.",
+  "main": "server.js",
+  "author": "Scotch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scotch-io/node-web-scraper"
+  },
+  "dependencies": {
+    "caniuse-api": "^2.0.0",
+    "cheerio": "latest",
+    "cors": "^2.8.4",
+    "express": "latest",
+    "get-css": "^1.2.7-2",
+    "helmet": "^3.12.1",
+    "image-downloader": "^3.4.1",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.5",
+    "puppeteer": "^1.5.0",
+    "request": "latest",
+    "request-promise": "^4.2.2"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  }
+}
