@@ -66,7 +66,7 @@ server.get('/scrape', (req, res) => {
       res.status(200).json({links, brokenImages, compatibilities});
     }).catch(err => {
       console.log(err);
-      res.status(500).json(err);
+      res.status(500).json({ message: 'Request is failing in the puppeteer function.'});
     });
   } else {
     res.status(300).json({message: "Requests must include a url."})
